@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/80 dark:border-slate-800 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand */}
           <Link to="/" className="flex items-center gap-3 group">
@@ -63,14 +63,14 @@ export const Navbar: React.FC = () => {
                   AI 共创平台
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:block">
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 hidden xl:block">
                 面向跨专业学习场景的 AI Skill 与 Agent 实践创新
               </p>
             </div>
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => {
               const Icon = item.icon;
               const active = isActive(item.path);
@@ -78,7 +78,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${
+                  className={`flex items-center gap-1.5 px-3.5 py-2 text-[13px] font-medium whitespace-nowrap rounded-lg transition-all ${
                     active
                       ? item.highlight
                         ? 'bg-brand-600 text-white shadow-sm shadow-brand-600/30'
